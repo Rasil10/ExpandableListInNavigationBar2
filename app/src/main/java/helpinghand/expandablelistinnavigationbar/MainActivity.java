@@ -2,9 +2,7 @@ package helpinghand.expandablelistinnavigationbar;
 
 import android.app.FragmentManager;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -40,14 +38,14 @@ public class MainActivity extends AppCompatActivity
         textView=(TextView)findViewById(R.id.textView);
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+       // FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+       // fab.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+         //   public void onClick(View view) {
+           //     Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+             //           .setAction("Action", null).show();
+         //   }
+      //  });
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -106,6 +104,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
+                FragmentManager fm = getFragmentManager();
                 ArrayList<DressInfo> dressData=new ArrayList<>();
                 // TODO Auto-generated method stub
                 Toast.makeText(
@@ -118,24 +117,30 @@ public class MainActivity extends AppCompatActivity
                 dressData=getRequiredData(listDataChild.get(
                         listDataHeader.get(groupPosition)).get(
                         childPosition));
-                FragmentManager fm = getFragmentManager();
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("dresses",dressData);
-                AccessoriesFragment accessoriesFragment=new AccessoriesFragment();
-                accessoriesFragment.setArguments(bundle);
-                fm.beginTransaction().replace(R.id.mainFrame,accessoriesFragment) .commit();
-                drawer.closeDrawer(GravityCompat.START);
+                if(listDataChild.get(
+                        listDataHeader.get(groupPosition)).get(
+                        childPosition).equalsIgnoreCase("shirts")){
+                    fm.beginTransaction().replace(R.id.mainFrame,new shirtfragment()).commit();
+                    drawer.closeDrawer(GravityCompat.START);
+
+                }
+
+//                Bundle bundle = new Bundle();
+//                bundle.putSerializable("dresses",dressData);
+//                AccessoriesFragment accessoriesFragment=new AccessoriesFragment();
+//                accessoriesFragment.setArguments(bundle);
+//                fm.beginTransaction().replace(R.id.mainFrame,accessoriesFragment) .commit();
+
+
                 return false;
+
             }
         });
     }
 
     private ArrayList<DressInfo> getRequiredData(String category) {
         ArrayList<DressInfo> dressInfos = new ArrayList<>();
-        for (int i = 1; i <= 20; i++) {
-            dressInfos.add(new DressInfo(category + i, String.valueOf(i * i), R.drawable.shopping_bag));
 
-        }
         return dressInfos;
     }
 
@@ -151,6 +156,7 @@ public class MainActivity extends AppCompatActivity
         // Adding child data
         List<String> Mens = new ArrayList<String>();
         Mens.add("Shirts");
+
         Mens.add("Pants");
         Mens.add("Sweaters");
         Mens.add("Shoes");

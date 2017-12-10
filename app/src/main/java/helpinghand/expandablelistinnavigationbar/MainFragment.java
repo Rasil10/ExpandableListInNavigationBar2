@@ -110,19 +110,19 @@ public class MainFragment extends Fragment {
     }
     private ArrayList<SingleItemModel> createDummyData() {
         ArrayList<SingleItemModel> data2 = new ArrayList<>();
-        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.facebook));
-        data2.add(new SingleItemModel("saree", "all women", R.drawable.home));
-        data2.add(new SingleItemModel("pant", "gents", R.drawable.facebook));
-        data2.add(new SingleItemModel("shirt", "all men", R.drawable.home));
-        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.facebook));
-        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.home));
-        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.facebook));
-        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.home));
-        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.facebook));
-        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.home));
-        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.facebook));
-        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.home));
-        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.facebook));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "all women", R.drawable.kurta));
+        data2.add(new SingleItemModel("pant", "gents", R.drawable.kurta));
+        data2.add(new SingleItemModel("shirt", "all men", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
 
         return data2;
     }

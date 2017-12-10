@@ -5,17 +5,17 @@ public class SingleItemModel {
     private String product2;
     private  int image_url;
 
-    private SingleItemModel(String product1, String product2, int image_url) {
+    public SingleItemModel(String product1, String product2, int image_url) {
         this.product1 = product1;
         this.product2 = product2;
         this.image_url = image_url;
     }
 
-    private String getProduct1() {
+    public String getProduct1() {
         return product1;
     }
 
-    private int getImage_url() {
+    public int getImage_url() {
         return image_url;
     }
 
@@ -27,7 +27,7 @@ public class SingleItemModel {
         this.product1 = product1;
     }
 
-    private String getProduct2() {
+    public String getProduct2() {
         return product2;
     }
 

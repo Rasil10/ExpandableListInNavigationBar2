@@ -17,7 +17,7 @@ import helpinghand.expandablelistinnavigationbar.R;
 import me.relex.circleindicator.CircleIndicator;
 
 public class ShopNowMainActivity extends AppCompatActivity {
-    private static final Integer[] XMEN = {R.drawable.apple_logo, R.drawable.apple_logo, R.drawable.apple_logo, R.drawable.apple_logo};
+    private static final Integer[] XMEN = {R.drawable.slide1, R.drawable.slide2, R.drawable.slide2, R.drawable.slide2};
     private static ViewPager mPager;
     private static int currentPage = 0;
     Button shopNowButton;
