@@ -3,11 +3,105 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="helpinghand.expandablelistinnavigationbar.shirtfragment">
-    <?xml version="1.0" encoding="utf-8"?>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_margin="5dp">
+
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/imagekurta1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/kurta"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/imagekurta2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/kurta"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/imagekurta3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/kurta"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/imagekurta4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/kurta"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/imagekurta5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/kurta"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/imagekurta6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/kurta"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/imagekurta7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/kurta"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/imagekurta8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/kurta"
+                android:layout_margin="5dp"
+                />
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,92 +113,18 @@
                 android:id="@+id/img_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/kurta" />
+                android:background="@drawable/kurta"
+                android:layout_margin="5dp"/>
 
             <ImageView
                 android:layout_weight="1"
                 android:id="@+id/img_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/kurta" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="2">
-
-            <ImageView
-                android:layout_weight="1"
-                android:id="@+id/img_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/facebook" />
-
-            <ImageView
-                android:layout_weight="1"
-                android:id="@+id/img_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/facebook" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="2">
-
-            <ImageView
-                android:layout_weight="1"
-                android:id="@+id/img_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/facebook" />
-
-            <ImageView
-                android:layout_weight="1"
-                android:id="@+id/img_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/facebook" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="2">
-
-            <ImageView
-                android:layout_weight="1"
-                android:id="@+id/img_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/facebook" />
-
-            <ImageView
-                android:layout_weight="1"
-                android:id="@+id/img_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/facebook" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="2">
-
-            <ImageView
-                android:layout_weight="1"
-                android:id="@+id/img_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/facebook" />
-
-            <ImageView
-                android:layout_weight="1"
-                android:id="@+id/img_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/facebook" />
+                android:background="@drawable/kurta"
+                android:layout_margin="5dp"/>
         </LinearLayout>
     </LinearLayout>
-
+    </ScrollView>
 
 </FrameLayout>
