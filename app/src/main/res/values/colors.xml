@@ -6,4 +6,13 @@
     <color name="white">#fff</color>
     <color name="black">#000</color>
     <color name="littleDarkWhite">#F5F5F5</color>
+    <color name="text_color">#23a3d6</color>
+    <color name="button_color">#23a395</color>
+    <color name="firstscreeen_color">#FFFF</color>
+    <color name="list_group_title">#808080</color>
+    <color name="list_item_title">#AAAAAA</color>
+    <color name="nav_header_color">#394750</color>
+    <color name="buttoncolor">#2b363a</color>
+    <color name="color_login">#FFEB3B</color>
+    <color name="button_color2">#FBE9E7</color>
 </resources>

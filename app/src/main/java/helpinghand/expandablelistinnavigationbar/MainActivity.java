@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         FragmentManager fm=getFragmentManager();
-        fm.beginTransaction().replace(R.id.mainFrame,new MainFragment());
+        fm.beginTransaction().replace(R.id.mainFrame,new MainFragment()).commit();
 
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
         prepareListData();

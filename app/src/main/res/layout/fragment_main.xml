@@ -1,13 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="helpinghand.expandablelistinnavigationbar.MainFragment">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <android.support.design.widget.BottomNavigationView
+                android:id="@+id/navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="@color/color_login"
+                app:menu="@menu/navigation" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/Viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"></android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Featured"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:stretchColumns="0,1">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:paddingBottom="8dp">
+
+                        <Button
+                            android:id="@+id/Mensbutton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight=".5"
+                            android:background="@color/color_login"
+                            android:text="Mens"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="40px"
+                            android:textStyle="normal" />
+
+                        <Button
+                            android:id="@+id/womensbutton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_weight=".5"
+                            android:background="@color/color_login"
+                            android:text="Women"
+                            android:textAllCaps="false"
+
+                            android:textColor="#ffffff"
+                            android:textSize="40px"
+                            android:textStyle="normal" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:paddingBottom="8dp">
+
+                        <Button
+                            android:id="@+id/Computing"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight=".5"
+                            android:background="@color/color_login"
+                            android:text="Computing"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="40px"
+                            android:textStyle="normal" />
+
+                        <Button
+                            android:id="@+id/sports"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_weight=".5"
+                            android:background="@color/color_login"
+                            android:text="sports"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="40px"
+                            android:textStyle="normal" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:paddingBottom="8dp">
+
+                        <Button
+                            android:id="@+id/appliances"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight=".5"
+                            android:background="@color/color_login"
+                            android:text="Appliances"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="40px"
+                            android:textStyle="normal" />
+
+                        <Button
+                            android:id="@+id/homeandliving"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_weight=".5"
+                            android:background="@color/color_login"
+                            android:text="Home and Living"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="40px"
+                            android:textStyle="normal" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:paddingBottom="8dp">
+
+                        <Button
+                            android:id="@+id/beautyHub"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight=".5"
+                            android:background="@color/color_login"
+                            android:text="BeautyHub"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="40px"
+                            android:textStyle="normal" />
+
+                        <Button
+                            android:id="@+id/Smartphones"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_weight=".5"
+                            android:background="@color/color_login"
+                            android:text="Smartphones"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="40px"
+                            android:textStyle="normal" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 
 </FrameLayout>
+
+
+
+
+
