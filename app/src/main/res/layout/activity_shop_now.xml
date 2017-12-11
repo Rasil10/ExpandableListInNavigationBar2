@@ -37,7 +37,7 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/tahoma"
-            android:text="WELCOME TO ECOMMERCE"
+            android:text="WELCOME TO Emall"
             android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold" />

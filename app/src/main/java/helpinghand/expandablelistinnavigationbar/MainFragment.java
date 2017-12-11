@@ -2,6 +2,7 @@ package helpinghand.expandablelistinnavigationbar;
 
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -9,10 +10,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -29,6 +32,7 @@ public class MainFragment extends Fragment {
     LinearLayout sliderdot;
     private int dotscount;
     private ImageView[] dots;
+    Button mensbutton;
 
 
     FragmentPagerAdapter adapterViewpager;
@@ -89,26 +93,45 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        mensbutton = (Button) view.findViewById(R.id.mensbutton);
+        mensbutton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), Man_class.class);
+                startActivity(i);
+
+            }
+        });
+
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this.getActivity());
         viewPager = (ViewPager) view.findViewById(R.id.Viewpager);
 
         viewPager.setAdapter(viewPagerAdapter);
 
-        allSampleData=createDummyData();
+        allSampleData = createDummyData();
         RecyclerView my_recycler_view = (RecyclerView) view.findViewById(R.id.recycler_view);
+        RecyclerView my_recycler_view2 = (RecyclerView) view.findViewById(R.id.recycler_view2);
+
+        int deviceHeight = getActivity().getWindowManager().getDefaultDisplay().getHeight();
+        DisplayMetrics displayMetrics = getActivity().getResources().getDisplayMetrics();
+        int width = displayMetrics.widthPixels;
+        int height = displayMetrics.heightPixels;
 
 
-        RecyclerViewDataAdapter recyclerViewDataAdapter = new RecyclerViewDataAdapter(this.getActivity(), allSampleData);
+        RecyclerViewDataAdapter recyclerViewDataAdapter = new RecyclerViewDataAdapter(this.getActivity(), allSampleData, height);
+        RecyclerViewDataAdapter recyclerViewDataAdapter2 = new RecyclerViewDataAdapter(this.getActivity(), allSampleData, height);
 
 
         my_recycler_view.setLayoutManager(new LinearLayoutManager(this.getActivity(), LinearLayoutManager.HORIZONTAL, false));
+        my_recycler_view2.setLayoutManager(new LinearLayoutManager(this.getActivity(), LinearLayoutManager.HORIZONTAL, false));
 
         my_recycler_view.setAdapter(recyclerViewDataAdapter);
+        my_recycler_view2.setAdapter(recyclerViewDataAdapter2);
 
         return view;
     }
-    private ArrayList<SingleItemModel> createDummyData() {
+
+    private ArrayList<SingleItemModel> createDummyData2() {
         ArrayList<SingleItemModel> data2 = new ArrayList<>();
         data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
         data2.add(new SingleItemModel("kurta", "all women", R.drawable.kurta));
@@ -124,6 +147,24 @@ public class MainFragment extends Fragment {
         data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
         data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
 
+        return data2;
+    }
+
+    private ArrayList<SingleItemModel> createDummyData() {
+        ArrayList<SingleItemModel> data2 = new ArrayList<>();
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "all women", R.drawable.kurta));
+        data2.add(new SingleItemModel("pant", "gents", R.drawable.kurta));
+        data2.add(new SingleItemModel("shirt", "all men", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
+        data2.add(new SingleItemModel("kurta", "ladies", R.drawable.kurta));
         return data2;
     }
 

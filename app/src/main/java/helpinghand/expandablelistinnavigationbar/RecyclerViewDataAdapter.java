@@ -11,17 +11,19 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by DELL on 12/8/2017.
+ * Created by DELL on 12/seven/2017.
  */
 
 public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDataAdapter.ItemRowHolder> {
 
     private ArrayList<SingleItemModel> dataList;
     private Context mContext;
+    private int  deviceHeight ;
 
-    public RecyclerViewDataAdapter(Context context, ArrayList<SingleItemModel> dataList) {
+    public RecyclerViewDataAdapter(Context context, ArrayList<SingleItemModel> dataList, int deviceHeight) {
         this.dataList = dataList;
         this.mContext = context;
+        this.deviceHeight = deviceHeight;
     }
 
     @Override
@@ -39,7 +41,8 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
         itemRowHolder.itemTitle.setText(currentSingleItemModel.getProduct1());
         itemRowHolder.productTitle.setText(currentSingleItemModel.getProduct2());
         itemRowHolder.imageUrl.setImageResource(currentSingleItemModel.getImage_url());
-
+itemRowHolder.imageUrl.getLayoutParams().height = deviceHeight/12;
+itemRowHolder.imageUrl.requestLayout();
 
 
 

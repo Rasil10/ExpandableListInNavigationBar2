@@ -17,4 +17,5 @@
     <string name="User">User</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="title_activity_man_class">Men Dress</string>
 </resources>
